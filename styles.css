@@ -18,3 +18,16 @@
   z-index: 2000;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
