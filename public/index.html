@@ -2,17 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privasee - Consent Banner</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+  <!-- Consent Banner -->
   <div id="cookie-banner" class="cookie-banner">
     <p>This website uses cookies to enhance your experience. Manage your preferences below.</p>
     <button onclick="acceptAll()">Accept All</button>
     <button onclick="rejectAll()">Reject All</button>
     <button onclick="customize()">Customize</button>
   </div>
+
+  <!-- Customize Modal -->
+  <div id="customize-modal" class="modal" style="display: none;">
+    <h3>Customize Your Preferences</h3>
+    <form id="customize-form">
+      <label>
+        <input type="checkbox" name="categories" value="essential" checked disabled />
+        Essential (required)
+      </label><br />
+      <label>
+        <input type="checkbox" name="categories" value="analytics" />
+        Analytics
+      </label><br />
+      <label>
+        <input type="checkbox" name="categories" value="marketing" />
+        Marketing
+      </label><br /><br />
+      <button type="submit">Save Preferences</button>
+      <button type="button" onclick="closeModal()">Cancel</button>
+    </form>
+  </div>
+
+  <!-- Firebase SDKs (CDN) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+  <!-- Firebase Config -->
+  <script src="../firebase/firebase.js"></script>
+
+  <!-- Consent Banner Logic -->
   <script src="../scripts/banner.js"></script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+.cookie-banner {
+  background: #f4f4f4;
+  padding: 1em;
+  border: 1px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.modal {
+  position: fixed;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1em;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: 2000;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}

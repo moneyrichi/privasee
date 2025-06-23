@@ -1,17 +1,13 @@
-// Replace the config object below with your Firebase project's config
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-
+// Using Firebase CDN version (global variables)
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+   apiKey: "AIzaSyCj4vS0ubW7LmyPJBvHGqkW6fYqk9khouI",
+    authDomain: "privasee-247.firebaseapp.com",
+    projectId: "privasee-247",
+    storageBucket: "privasee-247.firebasestorage.app",
+    messagingSenderId: "363488947",
+    appId: "1:363488947:web:0a5175b8937c0c626ef2c6",
+  
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-export { db };
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
