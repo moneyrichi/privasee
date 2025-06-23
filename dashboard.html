@@ -2,68 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privasee - Admin Dashboard</title>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Privasee Admin Dashboard</h1>
 
-<div id="auth-section">
-  <button id="login-btn" onclick="signIn()">Sign In with Google</button>
-  <button id="logout-btn" onclick="signOut()" style="display:none;">Sign Out</button>
-</div>
-<br/>
+  <!-- Google Auth Section -->
+  <div id="auth-section">
+    <button id="login-btn" onclick="signIn()">Sign In with Google</button>
+    <button id="logout-btn" onclick="signOut()" style="display:none;">Sign Out</button>
+  </div>
+  <br/>
 
-<div id="dashboard-content" style="display:none;">
-  <!-- All your existing filter buttons, table, export button go here -->
+  <!-- Dashboard Content -->
+  <div id="dashboard-content" style="display:none;">
+    <!-- Status Filters -->
+    <div>
+      <button onclick="loadAll()">Show All</button>
+      <button onclick="loadAccepted()">Show Accepted</button>
+      <button onclick="loadRejected()">Show Rejected</button>
+    </div>
+    <br/>
 
+    <!-- Category Filters -->
+    <div>
+      <button onclick="loadByCategory('analytics')">Analytics</button>
+      <button onclick="loadByCategory('marketing')">Marketing</button>
+    </div>
+    <br/>
 
+    <!-- CSV Export Button -->
+    <div>
+      <button onclick="exportCSV()">Export to CSV</button>
+    </div>
+    <br/>
 
-<div>
-  <button onclick="loadAll()">Show All</button>
-  <button onclick="loadAccepted()">Show Accepted</button>
-  <button onclick="loadRejected()">Show Rejected</button>
-</div>
-<br/>
+    <!-- Consent Table -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Categories</th>
+          <th>Accepted</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody id="consent-table-body">
+        <!-- Data will be inserted here -->
+      </tbody>
+    </table>
+  </div>
 
-<!-- New Category Filters -->
-<div>
-  <button onclick="loadByCategory('analytics')">Analytics</button>
-  <button onclick="loadByCategory('marketing')">Marketing</button>
-</div>
-<br/>
-
-<!-- CSV Export Button -->
-<div>
-  <button onclick="exportCSV()">Export to CSV</button>
-</div>
-<br/>
-
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Categories</th>
-        <th>Accepted</th>
-        <th>Timestamp</th>
-      </tr>
-    </thead>
-    <tbody id="consent-table-body">
-      <!-- Data will be inserted here -->
-    </tbody>
-  </table>
-</div>
   <!-- Firebase SDKs (CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
 
-  <!-- Firebase Auth -->
-<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
-
-  <!-- Firebase config -->
-  <script src="../firebase/firebase.js"></script>
+  <!-- Firebase Config -->
+  <script src="firebase/firebase.js"></script>
 
   <!-- Dashboard Logic -->
-  <script src="../scripts/dashboard.js"></script>
+  <script src="scripts/dashboard.js"></script>
 </body>
 </html>
