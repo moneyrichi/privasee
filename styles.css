@@ -1,16 +1,24 @@
-/* Global Style - Center Banner */
+/* Global Body Style (Base) */
 body {
   background-color: #f5f5f5;
   font-family: 'Helvetica', 'Arial', sans-serif;
   color: #333;
   margin: 0;
   padding: 0;
+}
 
+/* Center Only Banner Page */
+body.home {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   flex-direction: column;
+}
+
+/* Dashboard Page Scrolls Naturally */
+body.dashboard {
+  padding: 20px;
 }
 
 /* Consent Banner and Modal */
@@ -21,7 +29,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   text-align: center;
-  margin: 20px;
+  margin: 20px auto;
 }
 
 .modal {
@@ -42,7 +50,7 @@ button {
 }
 
 button:hover {
-  background-color: #4a7cd4; /* Slightly darker blue */
+  background-color: #4a7cd4;
   transform: scale(1.03);
 }
 
@@ -64,7 +72,7 @@ table th, table td {
 }
 
 table th {
-  background-color: #6495ED; /* Cornflower Blue */
+  background-color: #6495ED;
   color: white;
 }
 
