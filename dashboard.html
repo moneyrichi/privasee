@@ -9,52 +9,45 @@
 <body class="dashboard">
   <h1>Privasee Admin Dashboard</h1>
 
-  <!-- Google Auth Section -->
-  <div id="auth-section">
+  <!-- Auth Section -->
+  <div id="auth-section" class="auth-buttons">
     <button id="login-btn" onclick="signIn()">Sign In with Google</button>
     <button id="logout-btn" onclick="signOut()" style="display:none;">Sign Out</button>
   </div>
-  <br/>
 
-  <!-- Dashboard Content -->
-  <div id="dashboard-content" style="display:none;">
-    <!-- Status Filters -->
-    <div>
+  <!-- Filters Section -->
+  <div class="filters-section">
+    <div class="status-filters">
       <button onclick="loadAll()">Show All</button>
       <button onclick="loadAccepted()">Show Accepted</button>
       <button onclick="loadRejected()">Show Rejected</button>
     </div>
-    <br/>
 
-    <!-- Category Filters -->
-    <div>
+    <div class="category-filters">
       <button onclick="loadByCategory('analytics')">Analytics</button>
       <button onclick="loadByCategory('marketing')">Marketing</button>
     </div>
-    <br/>
 
-    <!-- CSV Export Button -->
-    <div>
+    <div class="export-section">
       <button onclick="exportCSV()">Export to CSV</button>
     </div>
-    <br/>
-
-    <!-- Consent Table -->
-    <table border="1">
-      <thead>
-        <tr>
-          <th>Categories</th>
-          <th>Accepted</th>
-          <th>Timestamp</th>
-        </tr>
-      </thead>
-      <tbody id="consent-table-body">
-        <!-- Data will be inserted here -->
-      </tbody>
-    </table>
   </div>
 
-  <!-- Firebase SDKs (CDN) -->
+  <!-- Consent Table -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Categories</th>
+        <th>Accepted</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody id="consent-table-body">
+      <!-- Data will be inserted here -->
+    </tbody>
+  </table>
+
+  <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
@@ -65,4 +58,5 @@
   <!-- Dashboard Logic -->
   <script src="scripts/dashboard.js"></script>
 </body>
+
 </html>
