@@ -1,10 +1,16 @@
-/* Global Style */
+/* Global Style - Center Banner */
 body {
   background-color: #f5f5f5;
   font-family: 'Helvetica', 'Arial', sans-serif;
   color: #333;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
 /* Consent Banner and Modal */
@@ -14,8 +20,8 @@ body {
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 600px;
-  margin: 40px auto;
   text-align: center;
+  margin: 20px;
 }
 
 .modal {
@@ -44,7 +50,7 @@ button:active {
   transform: scale(0.97);
 }
 
-/* Table Styling (Dashboard) */
+/* Dashboard Table Styling */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -70,7 +76,7 @@ table tr:hover {
   background-color: #e0e0e0;
 }
 
-/* Auth Section */
+/* Auth Section Styling */
 #auth-section {
   text-align: center;
   margin-bottom: 20px;
@@ -82,7 +88,7 @@ table tr:hover {
   margin: 0 auto;
 }
 
-/* Optional: Smooth Page Animations */
+/* Optional Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
